@@ -106,7 +106,7 @@ CLUST get_fat (	/* 1:IO error, Else:Cluster status */
 #endif
 	}
 
-	return 1;	/* An error occured at the disk I/O layer */
+	return 1;	/* An error occurred at the disk I/O layer */
 }
 
 

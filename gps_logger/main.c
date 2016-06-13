@@ -83,7 +83,7 @@ ISR(edge interrupt)
 }
 */
 
-// function reads a string from a file, seperated with delimiters
+// function reads a string from a file, separated with delimiters
 StringStruct f_readWord(FIL * fil__)
 {
 	StringStruct result;

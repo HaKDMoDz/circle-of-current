@@ -29,7 +29,7 @@ unsigned long get_fattime()
 	return 0;
 }
 
-// function reads a string from a file, seperated with delimiters
+// function reads a string from a file, separated with delimiters
 StringWord f_readWord(FIL * fil__, const char *delimS)
 {
 	StringWord result;

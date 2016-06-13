@@ -205,11 +205,11 @@ namespace PokerServer
             }
         }
 
-        private void SendPlayerInfo(GamePlayer recepient, int seatnum)
+        private void SendPlayerInfo(GamePlayer recipient, int seatnum)
         {
             if (seat.ContainsKey(seatnum))
             {
-                recepient.Tunnel.SendMessage(String.Format(
+                recipient.Tunnel.SendMessage(String.Format(
                     "seatinfo:{0},{1},{2}",
                     seatnum, seat[seatnum].Name, seat[seatnum].Wallet
                     )
@@ -217,7 +217,7 @@ namespace PokerServer
             }
             else
             {
-                recepient.Tunnel.SendMessage(String.Format(
+                recipient.Tunnel.SendMessage(String.Format(
                     "seatinfo:{0},{1},{2}",
                     seatnum, "", 0
                     )
@@ -225,11 +225,11 @@ namespace PokerServer
             }
         }
 
-        private void SendAllPlayerInfo(GamePlayer recepient)
+        private void SendAllPlayerInfo(GamePlayer recipient)
         {
             for (int i = 0; i < MAX_SEAT; i++)
             {
-                SendPlayerInfo(recepient, i);
+                SendPlayerInfo(recipient, i);
             }
         }
 
