@@ -317,7 +317,7 @@ DWORD get_cluster (	/* 0xFFFFFFFF:Disk error, 1:Interal error, Else:Cluster stat
 		return LD_DWORD(&fs->win[((WORD)clst * 4) & (SS(fs) - 1)]) & 0x0FFFFFFF;
 	}
 
-	return 0xFFFFFFFF;	/* An error occured at the disk I/O layer */
+	return 0xFFFFFFFF;	/* An error occurred at the disk I/O layer */
 }
 
 
@@ -460,7 +460,7 @@ DWORD create_chain (	/* 0:No free cluster, 1:Internal error, 0xFFFFFFFF:Disk err
 		}
 		cs = get_cluster(fs, ncl);		/* Get the cluster status */
 		if (cs == 0) break;				/* Found a free cluster */
-		if (cs == 0xFFFFFFFF || cs == 1)/* An error occured */
+		if (cs == 0xFFFFFFFF || cs == 1)/* An error occurred */
 			return cs;
 		if (ncl == scl) return 0;		/* No free custer */
 	}
@@ -1346,7 +1346,7 @@ BYTE check_fs (	/* 0:The FAT boot record, 1:Valid boot record but not an FAT, 2:
 /*-----------------------------------------------------------------------*/
 
 static
-FRESULT auto_mount (	/* FR_OK(0): successful, !=0: any error occured */
+FRESULT auto_mount (	/* FR_OK(0): successful, !=0: any error occurred */
 	const char **path,	/* Pointer to pointer to the path name (drive number) */
 	FATFS **rfs,		/* Pointer to pointer to the found file system object */
 	BYTE chk_wp			/* !=0: Check media write protection for write access */
@@ -2298,7 +2298,7 @@ FRESULT f_mkdir (
 	INITBUF(dj, sfn, lfn);
 	res = follow_path(&dj, path);			/* Follow the file path */
 	if (res == FR_OK) res = FR_EXIST;		/* Any file or directory is already existing */
-	if (res != FR_NO_FILE)					/* Any error occured */
+	if (res != FR_NO_FILE)					/* Any error occurred */
 		LEAVE_FF(dj.fs, res);
 
 	dclst = create_chain(dj.fs, 0);			/* Allocate a new cluster for new directory table */

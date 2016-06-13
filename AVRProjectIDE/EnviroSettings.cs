@@ -54,7 +54,7 @@ namespace AVRProjectIDE
 
             if (LoadRecentList() == false)
             {
-                MessageBox.Show("Error Loading Enviroment Settings");
+                MessageBox.Show("Error Loading Environment Settings");
             }
         }
 

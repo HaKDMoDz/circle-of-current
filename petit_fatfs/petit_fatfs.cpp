@@ -57,7 +57,7 @@ void PFF::MMC_DESELECT()
 //! Initialization Function
 /*!
   \param cs_pin is the Arduino pin connected to the MMC card's CS pin
-  \param rx is a pointer to the SPI recieve function, it must return a byte and accept no parameters
+  \param rx is a pointer to the SPI receive function, it must return a byte and accept no parameters
   \param tx is a pointer to the SPI transmit function, it must accept a byte as a parameter and return nothing
   \return error code, see comments in pff.h for FRESULT enumeration
 	  

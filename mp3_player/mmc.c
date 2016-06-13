@@ -345,7 +345,7 @@ DSTATUS disk_initialize (
 	CardType = ty;
 	release_spi();
 
-	if (ty) {			/* Initialization succeded */
+	if (ty) {			/* Initialization succeeded */
 		Stat &= ~STA_NOINIT;		/* Clear STA_NOINIT */
 	} else {			/* Initialization failed */
 		power_off();

@@ -93,7 +93,7 @@ namespace PokerServer
             }
             catch (Exception ex)
             {
-                Logger.Log("While establising database connection", ex);
+                Logger.Log("While establishing database connection", ex);
                 return false;
             }
         }
